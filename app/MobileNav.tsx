@@ -8,8 +8,9 @@ const links = [
   ["How we deliver", "#delivery"],
   ["Industries", "#industries"],
   ["Pricing", "#plans"],
-  ["Contact", "#contact"],
 ] as const;
+
+const inquiryFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSca2Cqpd7uB5qGf0X6Li-dnczUwuZOXr0tNvVTYsjfUxWxAwg/viewform";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -66,6 +67,9 @@ export default function MobileNav() {
               {label}<span aria-hidden="true">↗</span>
             </a>
           ))}
+          <a href={inquiryFormUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
+            Contact<span aria-hidden="true">↗</span>
+          </a>
           <a
             className="mobile-overview"
             href="/ML_Kart_Company_Overview.pdf"

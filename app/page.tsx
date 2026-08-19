@@ -25,7 +25,7 @@ const plans = [
 ] as const;
 
 const inquiryFormUrl =
-  "https://docs.google.com/forms/d/e/1FAIpQLSca2Cqpd7uB5qGf0X6Li-dnczUwuZOXr0tNvVTYsjfUxWxAwg/viewform?embedded=true";
+  "https://docs.google.com/forms/d/e/1FAIpQLSca2Cqpd7uB5qGf0X6Li-dnczUwuZOXr0tNvVTYsjfUxWxAwg/viewform";
 
 function Arrow() {
   return (
@@ -175,7 +175,7 @@ export default function Home() {
             <a href="#layer">AI Layer</a>
             <a href="#industries">Industries</a>
             <a href="#plans">Pricing</a>
-            <a href="#contact">Contact</a>
+            <a href={inquiryFormUrl} target="_blank" rel="noreferrer">Contact</a>
           </div>
           <a className="overview-link" href="/ML_Kart_Company_Overview.pdf" download>Overview <Arrow /></a>
           <MobileNav />
@@ -187,7 +187,7 @@ export default function Home() {
           <a href="#top"><strong>ML Kart</strong><span>The AI Layer for Business</span></a>
           <div>
             <a className="local-explore" href="#products">Explore</a>
-            <a className="button button-small" href="#contact">Start a project</a>
+            <a className="button button-small" href={inquiryFormUrl} target="_blank" rel="noreferrer">Start a project</a>
           </div>
         </div>
       </nav>
@@ -346,47 +346,8 @@ export default function Home() {
             <h2 id="closing-title">Embed AI. Automate work. Grow the business.</h2>
             <p>Start with one workflow. Expand as ML Kart connects more customer touchpoints, teams and systems.</p>
             <div className="actions">
-              <a className="button" href="#contact">Start a conversation</a>
+              <a className="button" href={inquiryFormUrl} target="_blank" rel="noreferrer">Start a conversation</a>
               <a className="text-link" href="/ML_Kart_Company_Overview.pdf" download>Download company overview <Arrow /></a>
-            </div>
-          </div>
-        </section>
-
-        <section className="contact" id="contact" aria-labelledby="contact-title">
-          <div className="wide-shell contact-grid">
-            <div className="contact-copy">
-              <p className="eyebrow">Start a project</p>
-              <h2 id="contact-title">Tell us where work slows down.</h2>
-              <p>Share the workflow, customer experience or business process you want to improve. We’ll follow up with a practical starting point.</p>
-              <address className="contact-links">
-                <a href="mailto:mlkarthrteam@gmail.com">
-                  <span>Email</span>
-                  <strong>mlkarthrteam@gmail.com</strong>
-                </a>
-                <a href="tel:+12024305142">
-                  <span>Phone</span>
-                  <strong>+1 (202) 430-5142</strong>
-                </a>
-              </address>
-            </div>
-
-            <div className="form-card">
-              <div className="form-card-heading">
-                <p>Project inquiry</p>
-                <span>Usually takes 2 minutes</span>
-              </div>
-              <iframe
-                src={inquiryFormUrl}
-                title="ML Kart project inquiry form"
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-              >
-                Loading the ML Kart project inquiry form…
-              </iframe>
-              <p className="form-fallback">
-                Having trouble with the embedded form?{" "}
-                <a href={inquiryFormUrl.replace("?embedded=true", "")} target="_blank" rel="noreferrer">Open it in a new tab</a>.
-              </p>
             </div>
           </div>
         </section>
@@ -397,6 +358,7 @@ export default function Home() {
           <Wordmark />
           <p>The AI Layer for Business</p>
           <div className="footer-contact">
+            <a href={inquiryFormUrl} target="_blank" rel="noreferrer">Project inquiry</a>
             <a href="mailto:mlkarthrteam@gmail.com">mlkarthrteam@gmail.com</a>
             <a href="tel:+12024305142">+1 (202) 430-5142</a>
           </div>
