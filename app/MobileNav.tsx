@@ -7,7 +7,6 @@ const links = [
   ["AI Layer", "#layer"],
   ["How we deliver", "#delivery"],
   ["Industries", "#industries"],
-  ["Pricing", "#plans"],
 ] as const;
 
 const inquiryFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSca2Cqpd7uB5qGf0X6Li-dnczUwuZOXr0tNvVTYsjfUxWxAwg/viewform";

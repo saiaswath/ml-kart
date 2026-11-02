@@ -17,13 +17,6 @@ const industries = [
   ["Professional services", "Client intake, document review, scheduling and billing workflows."],
 ] as const;
 
-const plans = [
-  ["Launch", "$2.5K–$7.5K", "$199–$499 / mo", "Website, lead capture and AI-ready foundations"],
-  ["Growth", "$5K–$15K", "$500–$2K / mo", "Website, chatbot, voice and CRM automation"],
-  ["Automate", "$10K–$30K", "$1K–$5K / mo", "One agent or workflow automation"],
-  ["Enterprise", "$25K–$150K+", "$3K–$25K+ / mo", "Multi-system AI Layer, governance and integrations"],
-] as const;
-
 const inquiryFormUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSca2Cqpd7uB5qGf0X6Li-dnczUwuZOXr0tNvVTYsjfUxWxAwg/viewform";
 
@@ -174,7 +167,6 @@ export default function Home() {
             <a href="#products">Products</a>
             <a href="#layer">AI Layer</a>
             <a href="#industries">Industries</a>
-            <a href="#plans">Pricing</a>
             <a href={inquiryFormUrl} target="_blank" rel="noreferrer">Contact</a>
           </div>
           <a className="overview-link" href="/ML_Kart_Company_Overview.pdf" download>Overview <Arrow /></a>
@@ -187,7 +179,7 @@ export default function Home() {
           <a href="#top"><strong>ML Kart</strong><span>The AI Layer for Business</span></a>
           <div>
             <a className="local-explore" href="#products">Explore</a>
-            <a className="button button-small" href={inquiryFormUrl} target="_blank" rel="noreferrer">Start a project</a>
+            <a className="button button-small" href={inquiryFormUrl} target="_blank" rel="noreferrer">Contact us</a>
           </div>
         </div>
       </nav>
@@ -316,27 +308,6 @@ export default function Home() {
               ))}
             </div>
             <p className="legal-note">Healthcare and regulated-industry deployments require customer-specific security, privacy and compliance review before production use.</p>
-          </div>
-        </section>
-
-        <section className="plans" id="plans" aria-labelledby="plans-title">
-          <div className="wide-shell">
-            <div className="section-heading">
-              <p className="eyebrow">Commercial model</p>
-              <h2 id="plans-title">Begin where the value is clear.</h2>
-              <p>Illustrative packaging. Price around business value, complexity, integrations and usage—not developer hours.</p>
-            </div>
-            <div className="plans-grid">
-              {plans.map(([name, setup, recurring, description], index) => (
-                <article key={name}>
-                  <span className="plan-index">0{index + 1}</span>
-                  <h3>{name}</h3>
-                  <div className="plan-setup"><strong>{setup}</strong><span>{index < 2 ? "setup" : "implementation"}</span></div>
-                  <div className="plan-recurring"><strong>{recurring}</strong><span>recurring platform</span></div>
-                  <p>{description}</p>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 
